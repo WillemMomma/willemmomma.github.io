@@ -94,3 +94,30 @@ p {
     margin-top: 0.5rem;
     font-size: 1.2rem;
 }
+
+/* styles.css */
+/* Apply styles to each dot in the trail */
+.trail-dot {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: all 0.2s ease-out;
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Gradually fade out each dot */
+.trail-dot {
+    animation: fadeTrail 0.5s forwards;
+}
+
+@keyframes fadeTrail {
+    to {
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 0;
+    }
+}

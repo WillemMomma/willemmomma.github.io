@@ -1,15 +1,19 @@
 // scripts.js
+// scripts.js
 document.addEventListener('mousemove', function (event) {
-    const glow = document.createElement('div');
-    glow.className = 'glow';
-    glow.style.left = `${event.pageX}px`;
-    glow.style.top = `${event.pageY}px`;
-    document.body.appendChild(glow);
+    // Create a div element to represent each "dot" in the trail
+    const trailDot = document.createElement('div');
+    trailDot.className = 'trail-dot';
+    trailDot.style.left = `${event.pageX}px`;
+    trailDot.style.top = `${event.pageY}px`;
+    document.body.appendChild(trailDot);
 
+    // Remove the dot after some time to simulate fading away
     setTimeout(() => {
-        glow.remove();
-    }, 400); 
+        trailDot.remove();
+    }, 500); // Adjust the timing to control the trail duration
 });
+
 
 // scripts.js
 document.addEventListener('DOMContentLoaded', function () {
