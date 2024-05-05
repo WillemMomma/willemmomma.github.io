@@ -1,24 +1,21 @@
 // Dash effect on the landing page
 function setupDashEffect() {
-    // Check for the existence of the canvas element to avoid errors
     const canvas = document.getElementById('dashes-canvas');
     if (!canvas) return;
 
     // Create the dashes
     const dashes = [];
-    const dashCount = 1000; // Adjust as necessary
-    const dashLength = 7; // Length of each dash
+    const dashCount = 1000;
+    const dashLength = 8; 
     const ctx = canvas.getContext('2d');
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    // Populate dashes array with random positions and angles
     for (let i = 0; i < dashCount; i++) {
         const angle = Math.random() * 2 * Math.PI;
         dashes.push({ x: Math.random() * canvas.width, y: Math.random() * canvas.height, angle, length: dashLength });
     }
 
-    // Function to draw dashes on the canvas
     function drawDashes() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.strokeStyle = 'rgba(255, 255, 255, 0.8)';
@@ -48,7 +45,7 @@ function setupDashEffect() {
             const angleToMouse = Math.atan2(dy, dx);
 
             // Rotate dashes away if mouse is close
-            if (distance < 250) {
+            if (distance < 100) {
                 dash.angle = angleToMouse + Math.PI;
             }
         });
