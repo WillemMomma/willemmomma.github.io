@@ -39,12 +39,12 @@ h1 {
 /* Add this to your CSS file */
 .glow {
     position: absolute;
-    width: 15px;
-    height: 15px;
+    width: 5px;
+    height: 5px;
     background: rgba(255, 255, 255, 0.8);
     border-radius: 50%;
     box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
     pointer-events: none;
     transform: translate(-50%, -50%);
-    transition: all 0.05s ease-out;
+    transition: all 0.1s ease-out;
 }
