@@ -161,7 +161,7 @@ p {
 h1 {
     font-size: 4rem;
     color: #ffffff;
-    text-shadow: 0 0 5px #a200ff;
+    text-shadow: 0 0 5px #007bff;
 }
 
 .subtitle {
@@ -226,3 +226,4 @@ h1 {
         font-size: 1rem;
     }
 }
+
