@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Website</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
 </head>
@@ -11,14 +10,21 @@
         <header>
             <nav>
                 <ul>
+                    <li><a class="blue-text" href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="projects.html">Projects</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </header>
+        <!-- Canvas for dash effect -->
+        <canvas id="dashes-canvas"></canvas>
         <main>
-            <h1>Willem <span class="blue-text">Momma</span></h1>
+            <div class="title-container">
+                <h1>Willem Momma</h1>
+                <p class="subtitle">Portfolio Website</p>
+                <hr class="blue-line">
+            </div>
         </main>
     </div>
     <script src="scripts.js"></script> <!-- Link to your JavaScript file -->

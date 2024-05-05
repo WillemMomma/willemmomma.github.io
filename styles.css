@@ -23,9 +23,31 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
 }
+.title-container {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 h1 {
-    font-size: 3rem;
+    font-size: 4rem;
+    color: #ffffff;
+    text-shadow: 0 0 1px #fafafa;
+}
+
+.subtitle {
+    font-size: 2rem;
+    color: #ffffff; /* Light text */
+}
+
+.blue-line {
+    width: 50%; /* Adjust as needed */
+    border: none;
+    height: 2px;
+    background-color: #007bff; /* Blue line */
+    margin: 0 auto; /* Center the line */
 }
 
 h2 {
@@ -33,6 +55,8 @@ h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
 }
+
+
 
 .blue-text {
     color: #007bff;
@@ -52,7 +76,7 @@ main {
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-    width: 70%;
+    width: 80%;
     padding: 2rem;
     margin: 1.5rem 0;
     border-radius: 15px;
@@ -115,4 +139,40 @@ p {
         transform: translate(-50%, -50%) scale(0.5);
         opacity: 0;
     }
+}
+
+#dashes-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Draw behind other content */
+}
+
+.title-container {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    font-size: 4rem;
+    color: #ffffff;
+    text-shadow: 0 0 1px #fafafa;
+}
+
+.subtitle {
+    font-size: 2rem;
+    color: #ffffff; /* Light text */
+}
+
+.blue-line {
+    width: 50%; /* Adjust as needed */
+    border: none;
+    height: 2px;
+    background-color: #007bff; /* Blue line */
+    margin: 0 auto; /* Center the line */
 }
