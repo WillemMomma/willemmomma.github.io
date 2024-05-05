@@ -11,3 +11,21 @@ document.addEventListener('mousemove', function (event) {
     }, 400); 
 });
 
+// scripts.js
+document.addEventListener('DOMContentLoaded', function () {
+    const projects = document.querySelectorAll('.project');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            } else {
+                entry.target.classList.remove('active');
+            }
+        });
+    }, {
+        threshold: 0.5 // Adjust the threshold for when to trigger the effect
+    });
+
+    projects.forEach(project => observer.observe(project));
+});
