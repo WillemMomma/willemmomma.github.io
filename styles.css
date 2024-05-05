@@ -48,3 +48,7 @@ h1 {
     transform: translate(-50%, -50%);
     transition: all 0.1s ease-out;
 }
+
+.blue-text {
+    color: #007bff;
+}
