@@ -35,6 +35,11 @@ main {
 h1 {
     font-size: 3rem;
 }
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
 
 /* Add this to your CSS file */
 .glow {
