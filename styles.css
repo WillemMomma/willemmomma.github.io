@@ -24,47 +24,38 @@ nav ul li a {
     font-weight: bold;
 }
 
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-    text-align: center;
-}
-
 h1 {
     font-size: 3rem;
 }
+
 h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 2rem;
 }
 
-/* Add this to your CSS file */
-.glow {
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 50%;
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    transition: all 0.1s ease-out;
-}
-
 .blue-text {
     color: #007bff;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem auto;
+    width: 100%;
+    max-width: 1200px;
 }
 
 .project {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: row;
+    width: 70%;
     padding: 2rem;
+    margin: 1.5rem 0;
     border-radius: 15px;
-    margin: 1rem 0;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: #111;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -88,11 +79,12 @@ h2 {
 
 .content {
     flex: 1;
+    text-align: left;
 }
 
 h3 {
     font-size: 2rem;
-    margin: 0;
+    margin: 0 0 0.5rem 0;
 }
 
 p {
@@ -100,8 +92,7 @@ p {
     font-size: 1.2rem;
 }
 
-/* styles.css */
-/* Apply styles to each dot in the trail */
+/* Trail dot styles */
 .trail-dot {
     position: absolute;
     width: 12px;
@@ -115,7 +106,6 @@ p {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
-/* Gradually fade out each dot */
 .trail-dot {
     animation: fadeTrail 0.5s forwards;
 }
