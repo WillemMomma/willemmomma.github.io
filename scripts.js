@@ -7,7 +7,7 @@ function setupDashEffect() {
     // Create the dashes
     const dashes = [];
     const dashCount = 1000; // Adjust as necessary
-    const dashLength = 10; // Length of each dash
+    const dashLength = 7; // Length of each dash
     const ctx = canvas.getContext('2d');
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
@@ -48,7 +48,7 @@ function setupDashEffect() {
             const angleToMouse = Math.atan2(dy, dx);
 
             // Rotate dashes away if mouse is close
-            if (distance < 100) {
+            if (distance < 250) {
                 dash.angle = angleToMouse + Math.PI;
             }
         });

@@ -161,7 +161,7 @@ p {
 h1 {
     font-size: 4rem;
     color: #ffffff;
-    text-shadow: 0 0 1px #fafafa;
+    text-shadow: 0 0 5px #a200ff;
 }
 
 .subtitle {
@@ -175,4 +175,43 @@ h1 {
     height: 2px;
     background-color: #007bff; /* Blue line */
     margin: 0 auto; /* Center the line */
+}
+
+@media (max-width: 500px) { /* For small mobile screens like iPhones */
+
+    nav ul {
+        padding: 0.5rem;
+    }
+
+    nav ul li a {
+        font-size: 5rem;
+    }
+
+    .title-container {
+        margin-top: 1rem;
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .blue-line {
+        width: 90%;
+    }
+
+    .project {
+        padding: 0.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
 }
