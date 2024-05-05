@@ -8,6 +8,6 @@ document.addEventListener('mousemove', function (event) {
 
     setTimeout(() => {
         glow.remove();
-    }, 1000); // Removes after 1 second
+    }, 100); // Removes after 1 second
 });
 
