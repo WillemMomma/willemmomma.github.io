@@ -180,19 +180,29 @@ h1 {
 @media (max-width: 500px) { /* For small mobile screens like iPhones */
 
     nav ul {
-        padding: 0.5rem;
+        flex-direction: column; /* Stack navigation items vertically */
+        gap: 0.5rem; /* Add smaller gaps between each link */
+        align-items: center; /* Center align the items */
+        padding: 1rem; /* Add padding for touch targets */
+    }
+
+    nav ul li {
+        margin: 0.5rem 0; /* Add a margin around each item */
     }
 
     nav ul li a {
-        font-size: 5rem;
+        font-size: 1.2rem; /* A readable, but not oversized, font size */
+        text-decoration: none; /* Maintain link style */
     }
 
     .title-container {
+        position: static; /* Remove absolute positioning */
         margin-top: 1rem;
+        text-align: center;
     }
 
     h1 {
-        font-size: 5rem;
+        font-size: 2.5rem; /* Reduce font size for the main title */
     }
 
     .subtitle {
@@ -200,18 +210,19 @@ h1 {
     }
 
     .blue-line {
-        width: 90%;
+        width: 90%; /* Wider line for mobile */
     }
 
     .project {
-        padding: 0.5rem;
+        padding: 1rem; /* Add comfortable padding for touch */
+        flex-direction: column; /* Stack media and content vertically */
     }
 
     h3 {
-        font-size: 1.2rem;
+        font-size: 1.5rem; /* Slightly smaller project title font size */
     }
 
     p {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 }
