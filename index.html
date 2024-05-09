@@ -17,8 +17,16 @@
                 </ul>
             </nav>
         </header>
-        <!-- Canvas for the manipulator -->
+        <!-- Canvas for the robotic manipulator -->
         <canvas id="manipulator-canvas"></canvas>
+        <!-- Sliders for controlling Kp and Kd -->
+        <div class="slider-container">
+            <label for="kp-slider">Kp: <span id="kp-value">0.0</span></label>
+            <input type="range" id="kp-slider" min="0" max="5" step="0.1" value="0">
+
+            <label for="kd-slider">Kd: <span id="kd-value">0.0</span></label>
+            <input type="range" id="kd-slider" min="0" max="5" step="0.1" value="0">
+        </div>
         <main>
             <div class="title-container">
                 <h1>Willem Momma</h1>

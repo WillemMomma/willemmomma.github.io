@@ -7,7 +7,7 @@ canvas.height = window.innerHeight;
 // Set up the base to align with the "P" in "Portfolio"
 const titleContainer = document.querySelector(".title-container");
 const titleContainerBounds = titleContainer.getBoundingClientRect();
-const baseX = titleContainerBounds.left - 60 ; // Adjust the offset to align with "P"
+const baseX = titleContainerBounds.left - 65; // Adjust the offset to align with "P"
 const baseY = titleContainerBounds.bottom + 20; // Adjust the offset as needed
 
 // Arm parameters
@@ -17,9 +17,26 @@ let jointAngles = [0, 0]; // Initialize to horizontal position
 // Maximum reach of the arm
 const maxReach = armLengths.reduce((a, b) => a + b, 0);
 
-// PID control parameters
-const Kp = 0.9, Ki = 0.0, Kd = 0.2; // Adjust gains carefully to avoid overshooting
+// PID control parameters (initialize with zero values)
+let Kp = 0.0, Ki = 0.0, Kd = 0.0;
 let integralError = [0, 0], previousError = [0, 0];
+
+// Slider elements for Kp and Kd
+const kpSlider = document.getElementById('kp-slider');
+const kdSlider = document.getElementById('kd-slider');
+const kpValueLabel = document.getElementById('kp-value');
+const kdValueLabel = document.getElementById('kd-value');
+
+// Event listeners for Kp and Kd sliders
+kpSlider.addEventListener('input', () => {
+    Kp = parseFloat(kpSlider.value);
+    kpValueLabel.textContent = Kp.toFixed(1);
+});
+
+kdSlider.addEventListener('input', () => {
+    Kd = parseFloat(kdSlider.value);
+    kdValueLabel.textContent = Kd.toFixed(1);
+});
 
 // Clamp the target position within the robot's maximum reach
 function clampTargetPosition(x, y) {

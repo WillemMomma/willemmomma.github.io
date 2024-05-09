@@ -227,3 +227,32 @@ h1 {
     }
 }
 
+/* styles.css */
+
+/* Style for the slider container */
+/* Slider container positioned to the top-right of the page */
+.slider-container {
+    position: absolute;
+    top: 20px; /* Adjust the distance from the top as needed */
+    left: 20px; /* Adjust the distance from the right as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    background-color: #000000; /* Light gray background */
+    border: 1px solid #ccc; /* Light border for visibility */
+    border-radius: 12px;
+    padding: 10px;
+    width: 250px; /* Adjust as needed */
+    box-shadow: #007bff 0 0 10px; /* White shadow for contrast */
+}
+
+/* Label styles for the sliders */
+.slider-container label {
+    font-weight: bold;
+}
+
+/* General slider style */
+.slider-container input[type="range"] {
+    width: 100%; /* Expand to the full width of the container */
+}
