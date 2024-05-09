@@ -95,6 +95,10 @@ main {
     margin-right: 1rem;
 }
 
+#no-scroll {
+    overflow: hidden;
+}
+
 .media img,
 .media video {
     max-width: 100%;
@@ -177,61 +181,6 @@ h1 {
     margin: 0 auto; /* Center the line */
 }
 
-@media (max-width: 500px) { /* For small mobile screens like iPhones */
-
-    nav ul {
-        flex-direction: column; /* Stack navigation items vertically */
-        gap: 0.5rem; /* Add smaller gaps between each link */
-        align-items: center; /* Center align the items */
-        padding: 1rem; /* Add padding for touch targets */
-    }
-
-    nav ul li {
-        margin: 0.5rem 0; /* Add a margin around each item */
-    }
-
-    nav ul li a {
-        font-size: 1.2rem; /* A readable, but not oversized, font size */
-        text-decoration: none; /* Maintain link style */
-    }
-
-    .title-container {
-        position: static; /* Remove absolute positioning */
-        margin-top: 1rem;
-        text-align: center;
-    }
-
-    h1 {
-        font-size: 2.5rem; /* Reduce font size for the main title */
-    }
-
-    .subtitle {
-        font-size: 1.2rem;
-    }
-
-    .blue-line {
-        width: 90%; /* Wider line for mobile */
-    }
-
-    .project {
-        padding: 1rem; /* Add comfortable padding for touch */
-        flex-direction: column; /* Stack media and content vertically */
-    }
-
-    h3 {
-        font-size: 1.5rem; /* Slightly smaller project title font size */
-    }
-
-    p {
-        font-size: 1rem;
-    }
-}
-
-/* styles.css */
-
-/* Style for the slider container */
-/* Slider container positioned to the top-right of the page */
-/* Positioning the slider container at the top-left */
 .slider-container {
     position: absolute;
     top: 20px;
@@ -258,3 +207,62 @@ h1 {
     width: 100%; /* Expand to the full width of the container */
 }
 
+
+
+/* Adjustments only for screens narrower than 768px */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: left;
+        align-items: center;
+        gap: 1.0rem;
+    }
+
+    .slider-container {
+        margin-top: 60px;
+        width: 200px;
+        font-size: 0.8rem;
+        padding: 10px;
+        top: 10px;
+        left: 10px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    p{
+        font-size: 1rem;
+        margin-top: 0.3rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+}
+
+/* Media query for project containers */
+@media screen and (max-width: 768px) {
+    .project {
+        width: 90%; /* Adjust width to occupy more of the mobile screen */
+        padding: 1rem; /* Reduce padding to fit better on mobile */
+        flex-direction: column; /* Stack the media and content vertically */
+        margin: 1rem auto; /* Adjust margin for spacing */
+    }
+
+    .media {
+        margin: 0 0 1rem 0; /* Add spacing below media for stacking */
+    }
+
+    h3 {
+        font-size: 1.5rem; /* Adjust heading size */
+    }
+
+    p {
+        font-size: 1rem; /* Adjust paragraph size */
+    }
+}

@@ -5,14 +5,26 @@ canvas.height = window.innerHeight;
 
 const titleContainer = document.querySelector(".title-container");
 const titleContainerBounds = titleContainer.getBoundingClientRect();
-const baseX = titleContainerBounds.left - 65; 
-const baseY = titleContainerBounds.bottom + 20; 
+let baseX, baseY;
+let armLengths, jointAngles;
+let maxReach;
 
-// Robot model
-const armLengths = [300, 300]; // Lengths of the two arms
-let jointAngles = [0, 0]; // Initialize to horizontal position
+// Detect if the device is mobile or desktop
+if (window.innerWidth <= 768) {
+    // Mobile settings
+    baseX = titleContainerBounds.left - 10;
+    baseY = titleContainerBounds.bottom - 20;
+    armLengths = [100, 100];
+    jointAngles = [0, 0]; 
+} else {
+    // Desktop settings
+    baseX = titleContainerBounds.left - 65;
+    baseY = titleContainerBounds.bottom + 20;
+    armLengths = [300, 300]; 
+    jointAngles = [0, 0]; 
+}
 
-const maxReach = armLengths.reduce((a, b) => a + b, 0);
+maxReach = armLengths.reduce((a, b) => a + b, 0);
 
 // gains
 let Kp = 0.0, Ki = 0.0, Kd = 0.0;
@@ -154,6 +166,19 @@ function drawManipulator(positions) {
 function clamp(value, min, max) {
     return Math.max(min, Math.min(max, value));
 }
+
+// Adjust the target position based on touch events
+function handleTouch(event) {
+    const touch = event.touches[0] || event.changedTouches[0];
+    updateAngles(touch.clientX, touch.clientY);
+    const positions = fkine(jointAngles);
+    drawManipulator(positions);
+}
+
+// Event listeners for touch events
+canvas.addEventListener('touchstart', handleTouch);
+canvas.addEventListener('touchmove', handleTouch);
+
 
 document.addEventListener('mousemove', (event) => {
     updateAngles(event.clientX, event.clientY);
