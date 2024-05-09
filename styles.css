@@ -22,6 +22,7 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    text-shadow: #007bff 0 0 10px; /* Blue shadow for contrast */
 }
 .title-container {
     text-align: center;
@@ -34,7 +35,7 @@ nav ul li a {
 h1 {
     font-size: 4rem;
     color: #ffffff;
-    text-shadow: 0 0 1px #fafafa;
+    text-shadow:#007bff 0 0 10px; 
 }
 
 .subtitle {
@@ -268,7 +269,7 @@ h1 {
 }
 
 /* styles.css */
-body {
+.subtitle, body, p {
     margin: 0;
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
@@ -276,13 +277,14 @@ body {
     font-style: normal;
     font-variation-settings:
       "wdth" 97;
-    background-color: #000;
     color: #fff;
 }
 
 /* Example for other text elements */
-h1, h2, h3, p, nav ul li a {
+h1, h2, h3, nav ul li a  {
     font-family: 'Roboto', sans-serif;
+    text-shadow:#007bff 0 0 5px; 
+
 }
 
 /* Any other styles using this font */
