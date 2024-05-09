@@ -151,18 +151,15 @@ function drawManipulator(positions) {
     }
 }
 
-// Helper function to clamp a value within a given range
 function clamp(value, min, max) {
     return Math.max(min, Math.min(max, value));
 }
 
-// Mouse movement event handler
 document.addEventListener('mousemove', (event) => {
     updateAngles(event.clientX, event.clientY);
     const positions = fkine(jointAngles);
     drawManipulator(positions);
 });
 
-// Initial drawing
 const initialPositions = fkine(jointAngles);
 drawManipulator(initialPositions);
