@@ -1,33 +1,28 @@
-// Initialize the canvas
 const canvas = document.getElementById('manipulator-canvas');
 const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-// Set up the base to align with the "P" in "Portfolio"
 const titleContainer = document.querySelector(".title-container");
 const titleContainerBounds = titleContainer.getBoundingClientRect();
-const baseX = titleContainerBounds.left - 65; // Adjust the offset to align with "P"
-const baseY = titleContainerBounds.bottom + 20; // Adjust the offset as needed
+const baseX = titleContainerBounds.left - 65; 
+const baseY = titleContainerBounds.bottom + 20; 
 
-// Arm parameters
-const armLengths = [300, 300]; // Two link lengths
+// Robot model
+const armLengths = [300, 300]; // Lengths of the two arms
 let jointAngles = [0, 0]; // Initialize to horizontal position
 
-// Maximum reach of the arm
 const maxReach = armLengths.reduce((a, b) => a + b, 0);
 
-// PID control parameters (initialize with zero values)
+// gains
 let Kp = 0.0, Ki = 0.0, Kd = 0.0;
 let integralError = [0, 0], previousError = [0, 0];
 
-// Slider elements for Kp and Kd
 const kpSlider = document.getElementById('kp-slider');
 const kdSlider = document.getElementById('kd-slider');
 const kpValueLabel = document.getElementById('kp-value');
 const kdValueLabel = document.getElementById('kd-value');
 
-// Event listeners for Kp and Kd sliders
 kpSlider.addEventListener('input', () => {
     Kp = parseFloat(kpSlider.value);
     kpValueLabel.textContent = Kp.toFixed(1);
@@ -38,7 +33,6 @@ kdSlider.addEventListener('input', () => {
     kdValueLabel.textContent = Kd.toFixed(1);
 });
 
-// Clamp the target position within the robot's maximum reach
 function clampTargetPosition(x, y) {
     const dx = x - baseX;
     const dy = y - baseY;
@@ -51,7 +45,6 @@ function clampTargetPosition(x, y) {
     return [x, y];
 }
 
-// Forward Kinematics (FK)
 function fkine(angles) {
     let cumulativeAngle = 0;
     let currentX = baseX, currentY = baseY;
@@ -66,7 +59,6 @@ function fkine(angles) {
     return positions;
 }
 
-// Jacobian Calculation
 function jacobian(angles) {
     const J = [[0, 0], [0, 0]];
     const l1 = armLengths[0], l2 = armLengths[1];
@@ -82,7 +74,7 @@ function jacobian(angles) {
     return J;
 }
 
-// Compute the damped pseudoinverse of the Jacobian
+// Damped pseudoinverse Jacobian, this function is used to calculate the joint angles based on the target position and ensures numerical stability
 function pseudoJacobian(J) {
     const JT = [[], []];
     JT[0][0] = J[0][0]; JT[0][1] = J[1][0];
@@ -117,9 +109,7 @@ function pseudoJacobian(J) {
     ];
 }
 
-// Function to update joint angles using the damped pseudoinverse Jacobian
 function updateAngles(targetX, targetY) {
-    // Clamp target position within reachable range
     [targetX, targetY] = clampTargetPosition(targetX, targetY);
 
     const positions = fkine(jointAngles);
@@ -143,8 +133,7 @@ function updateAngles(targetX, targetY) {
         J_pseudo[1][0] * dp[0] + J_pseudo[1][1] * dp[1]
     ];
 
-    // Limit the joint angle changes to prevent excessive movement
-    const maxChange = 0.1; // Adjust the value to control the sensitivity
+    const maxChange = 0.5; // Adjust the value to control the sensitivity
     jointAngles = jointAngles.map((angle, i) => angle + clamp(dTheta[i] * 0.1, -maxChange, maxChange));
 }
 
