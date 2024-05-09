@@ -266,3 +266,24 @@ h1 {
         font-size: 1rem; /* Adjust paragraph size */
     }
 }
+
+/* styles.css */
+body {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 97;
+    background-color: #000;
+    color: #fff;
+}
+
+/* Example for other text elements */
+h1, h2, h3, p, nav ul li a {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Any other styles using this font */
+
