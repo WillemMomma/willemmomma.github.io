@@ -289,3 +289,10 @@ h1, h2, h3, nav ul li a  {
 
 /* Any other styles using this font */
 
+#kd-slider {
+    display: none;
+}
+
+#kd-slider + label {
+    display: none;
+}
