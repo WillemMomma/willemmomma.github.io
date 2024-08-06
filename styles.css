@@ -22,7 +22,7 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    text-shadow: #007bff 0 0 10px; /* Blue shadow for contrast */
+    text-shadow: #007bff 0 0 10px; 
 }
 .title-container {
     text-align: center;
@@ -40,15 +40,15 @@ h1 {
 
 .subtitle {
     font-size: 2rem;
-    color: #ffffff; /* Light text */
+    color: #ffffff; 
 }
 
 .blue-line {
-    width: 50%; /* Adjust as needed */
+    width: 50%; 
     border: none;
     height: 2px;
-    background-color: #007bff; /* Blue line */
-    margin: 0 auto; /* Center the line */
+    background-color: #007bff; 
+    margin: 0 auto; 
 }
 
 h2 {
@@ -152,7 +152,7 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Draw behind other content */
+    z-index: -1; 
 }
 
 .title-container {
@@ -171,15 +171,15 @@ h1 {
 
 .subtitle {
     font-size: 2rem;
-    color: #ffffff; /* Light text */
+    color: #ffffff;
 }
 
 .blue-line {
-    width: 50%; /* Adjust as needed */
+    width: 50%; 
     border: none;
     height: 2px;
-    background-color: #007bff; /* Blue line */
-    margin: 0 auto; /* Center the line */
+    background-color: #007bff; 
+    margin: 0 auto; 
 }
 
 .slider-container {
@@ -190,12 +190,12 @@ h1 {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
-    background-color: #000000; /* Black background */
+    background-color: #000000; 
     border: 1px solid #ccc;
     border-radius: 12px;
     padding: 10px;
     width: 250px;
-    box-shadow: #007bff 0 0 10px; /* Blue shadow for contrast */
+    box-shadow: #007bff 0 0 10px; 
 }
 
 /* Label styles for the sliders */
@@ -205,7 +205,7 @@ h1 {
 
 /* General slider style */
 .slider-container input[type="range"] {
-    width: 100%; /* Expand to the full width of the container */
+    width: 100%; 
 }
 
 
@@ -249,10 +249,10 @@ h1 {
 /* Media query for project containers */
 @media screen and (max-width: 768px) {
     .project {
-        width: 90%; /* Adjust width to occupy more of the mobile screen */
-        padding: 1rem; /* Reduce padding to fit better on mobile */
-        flex-direction: column; /* Stack the media and content vertically */
-        margin: 1rem auto; /* Adjust margin for spacing */
+        width: 90%; 
+        padding: 1rem; 
+        flex-direction: column; 
+        margin: 1rem auto; 
     }
 
     .media {
@@ -295,4 +295,68 @@ h1, h2, h3, nav ul li a  {
 
 #kd-slider + label {
     display: none;
+}
+
+/* Style for the profile picture on about page */
+.profile-picture {
+    display: block;
+    margin: 20px auto; 
+    width: 300px; 
+    height: 300px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+}
+
+/* Style for the active navbar link */
+nav ul li a.active {
+    color: #007BFF; 
+    font-weight: bold; 
+}
+
+/* Styles for the contact form */
+#contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+#contact form label {
+    margin-top: 10px;
+}
+
+#contact form input,
+#contact form textarea {
+    width: auto;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#contact form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+#contact form button:hover {
+    background-color: #0056b3;
+}
+
+/* Style for the glow effect */
+#mouse-glow {
+    position: fixed;
+    pointer-events: none;
+    width: 15px;
+    height: 15px;
+    background: rgba(0, 123, 255, 0.5); 
+    border-radius: 50%;
+    box-shadow: 0 0 15px 15px rgba(0, 123, 255, 0.5); 
+    transform: translate(-50%, -50%); 
+    z-index: 9999; 
 }

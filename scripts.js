@@ -188,3 +188,27 @@ document.addEventListener('mousemove', (event) => {
 
 const initialPositions = fkine(jointAngles);
 drawManipulator(initialPositions);
+
+// Glow effect code
+const mouseGlow = document.getElementById('mouse-glow');
+
+document.addEventListener('mousemove', (event) => {
+    updateAngles(event.clientX, event.clientY);
+    const positions = fkine(jointAngles);
+    drawManipulator(positions);
+
+    // Update the position of the glow effect
+    mouseGlow.style.left = `${event.clientX}px`;
+    mouseGlow.style.top = `${event.clientY}px`;
+});
+
+document.addEventListener('touchmove', (event) => {
+    const touch = event.touches[0] || event.changedTouches[0];
+    updateAngles(touch.clientX, touch.clientY);
+    const positions = fkine(jointAngles);
+    drawManipulator(positions);
+
+    // Update the position of the glow effect
+    mouseGlow.style.left = `${touch.clientX}px`;
+    mouseGlow.style.top = `${touch.clientY}px`;
+});

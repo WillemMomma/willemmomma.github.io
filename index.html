@@ -3,31 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Portfolio Website</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- This ensures responsive scaling -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body id="no-scroll">
-        <div id="landing-page">
-        <header>
-            <nav>
-                <ul>
-                    <li><a class="blue-text" href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        <!-- Canvas for the robotic manipulator -->
-        <canvas id="manipulator-canvas"></canvas>
-        <!-- Sliders for controlling Kp and Kd -->
-        <div class="slider-container">
-            <label for="kp-slider">Kp: <span id="kp-value">0.0</span></label>
-            <input type="range" id="kp-slider" min="0" max="20" step="0.1" value="0">
+    <div id="landing-page">
+        <div id="mouse-glow"></div> <!-- Glow effect div -->
 
+        <header id="navbar"></header> <!-- Navbar will be injected here -->
+        <canvas id="manipulator-canvas"></canvas>
+        <div class="slider-container">
+            <label for="kp-slider">Slide or tap to increase the gain: <span id="kp-value">0.0</span></label>
+            <input type="range" id="kp-slider" min="0" max="20" step="0.1" value="0">
             <label for="kd-slider"> <span id="kd-value"></span></label>
             <input type="range" id="kd-slider" min="0" max="200" step="1" value="0" disabled>
         </div>
@@ -38,6 +28,7 @@
             </div>
         </main>
     </div>
-    <script src="scripts.js"></script> <!-- Link to your JavaScript file -->
+    <script src="navbar.js"></script> <!-- Script to load the navbar -->
+    <script src="scripts.js"></script>
 </body>
 </html>

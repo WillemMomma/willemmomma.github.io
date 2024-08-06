@@ -3,29 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>Contact</title>
-    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <div id="about">
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a class="blue-text" href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
+    <div id="contact">
+        <header id="navbar"></header> <!-- Navbar will be injected here -->
         <main>
             <h2>Contact Me</h2>
             <p>Email: willemmomma@gmail.com</p>
             <p>Phone: +31620291917</p>
+            <h2>Contact Form</h2>
+            <form action="https://formspree.io/f/xpwarzaw" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Your email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Your message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
         </main>
     </div>
+    <script src="navbar.js"></script> <!-- Script to load the navbar -->
 </body>
 </html>

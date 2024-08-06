@@ -11,20 +11,11 @@
 </head>
 <body>
     <div id="projects">
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a class="blue-text" href="projects.html">Projects</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
+        <header id="navbar"></header> <!-- Navbar will be injected here -->
         <main>
             <div class="project" id="project1">
                 <div class="media">
-                    <video src="IMG_3101.mov" controls></video>
+                    <video src="media/IMG_3101.mov" controls></video>
                 </div>
                 <div class="content">
                     <h3>Impedance Control in Dual Robots</h3>
@@ -33,7 +24,7 @@
             </div>
             <div class="project" id="project6">
                 <div class="media">
-                    <video src="IMG_2523.mov" controls></video>
+                    <video src="media/IMG_2523.mov" controls></video>
                 </div>
                 <div class="content">
                     <h3>Patient Tracking in Surgical Navigation</h3>
@@ -42,7 +33,7 @@
             </div>
             <div class="project" id="project2">
                 <div class="media">
-                    <img src="PDM.gif" alt="Project Planning and Decision Making"></img>
+                    <img src="media/PDM.gif" alt="Project Planning and Decision Making">
                 </div>
                 <div class="content">
                     <h3>Motion Planning and Decision Making</h3>
@@ -51,7 +42,7 @@
             </div>
             <div class="project" id="project3">
                 <div class="media">
-                    <img src="MP.gif" alt="Project Machine Perception"></img>
+                    <img src="media/MP.gif" alt="Project Machine Perception">
                 </div>
                 <div class="content">
                     <h3>Pedestrian Detection Using Machine Perception</h3>
@@ -60,7 +51,7 @@
             </div>
             <div class="project" id="project4">
                 <div class="media">
-                    <img src="ML.gif" alt="Project Drone Control"></img>
+                    <img src="media/ML.gif" alt="Project Drone Control">
                 </div>
                 <div class="content">
                     <h3>Machine Learning for Autonomous Steering</h3>
@@ -69,7 +60,7 @@
             </div>
             <div class="project" id="project5">
                 <div class="media">
-                    <img src="diamond.gif" alt="Project Drone Control"></img>
+                    <img src="media/diamond.gif" alt="Project Drone Control">
                 </div>
                 <div class="content">
                     <h3>Drone Control</h3>
@@ -78,6 +69,7 @@
             </div>
         </main>
     </div>
+    <script src="navbar.js"></script> <!-- Script to load the navbar -->
     <script src="scripts.js"></script> <!-- Link to your JavaScript file -->
 </body>
 </html>

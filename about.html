@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>About</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
@@ -11,22 +11,19 @@
 </head>
 <body>
     <div id="about">
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a class="blue-text" href="about.html">About</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
+        <header id="navbar"></header> <!-- Navbar will be injected here -->
         <main>
             <h2>About Me</h2>
-            <p>My name is Willem Momma, a robotics engineer currently graduating in the field of surgical robotics. I have a passion for robot control and interaction. </p>
+            <p>
+                Hello! I'm Willem Momma, a robotics engineer with a Master of Science degree from Delft University of Technology. My passion lies in the intersection of Robotics and Artificial Intelligence, with a special focus on the medical sector. Throughout my journey, I've worked on numerous projects both as a budding software engineer and during my MSc studies. Currently, I hold a part-time position as a research scientist in Robotics and AI at Amsterdam University Medical Centers and serve as the technical lead in developing a cutting-edge medical robotics lab.
+            </p>
+            <img src="media/profilepicture.JPG" alt="Profile Picture" class="profile-picture">
             <h2>About This Website</h2>
-            <p>This website is hosted on GitHub Pages and built with HTML and JavaScript. Rendered on the landing page is a simple 2dof 2D canvas robot model. A mousetracker combined with P(ID) control is implemented to follow the position of the mouse and control the robot based on Jacobian calculations.</p>
+            <p>
+                This portfolio website is a hobby project, developed purely for fun using HTML and JavaScript. The landing page features a simple 2-DOF robot model rendered on a 2D canvas. A mousetracker, combined with PID control, is implemented to follow the mouse position and control the robot based on Jacobian calculations. While this site showcases my enjoyment of coding with basic web technologies, I also have professional experience in building websites using frameworks such as React, WordPress, and Webflow.
+            </p>
         </main>
     </div>
+    <script src="navbar.js"></script> <!-- Script to load the navbar -->
 </body>
 </html>
