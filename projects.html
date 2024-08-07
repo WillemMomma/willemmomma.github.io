@@ -28,43 +28,59 @@
                 </div>
                 <div class="content">
                     <h3>Patient Tracking in Surgical Navigation</h3>
-                    <p>This project involved tracking a patient's movements using a combination of different sensors, an optical tracking system, and a repurposed haptic device. The project also included the fusion of sensor measurements to improve tracking accuracy.</p>
+                    <p>This project involved tracking a patient's movements using a combination of different sensors, an optical tracking system, and a repurposed haptic device. The project also included the fusion of sensor measurements through Kalman Filtering techniques to improve tracking accuracy.</p>
                 </div>
             </div>
             <div class="project" id="project2">
                 <div class="media">
-                    <img src="media/PDM.gif" alt="Project Planning and Decision Making">
+                    <img src="media/PDM.gif" alt="Motion Planning and Decision Making">
                 </div>
                 <div class="content">
                     <h3>Motion Planning and Decision Making</h3>
-                    <p>This project implemented an end-to-end motion planning pipeline using RRT* as a global planner and Model Predictive Control as a local planner capable of velocity obstacle avoidance.</p>
+                    <p>
+                        This project developed an end-to-end motion planning pipeline that integrates RRT* as a global planner and Model Predictive Control (MPC) as a local planner for effective velocity obstacle avoidance. 
+                        The system was implemented in Python and utilized the PyBullet physics engine to simulate various warehouse environments, allowing for comprehensive testing and validation of the planning algorithms.
+                    </p>
+                    <br>
+                    <p>
+                        The project is publicly available on <a href="https://github.com/WillemMomma/Planning_and_decision_making" target="_blank">GitHub</a>.
+                    </p>
                 </div>
             </div>
+            
             <div class="project" id="project3">
                 <div class="media">
                     <img src="media/MP.gif" alt="Project Machine Perception">
                 </div>
                 <div class="content">
-                    <h3>Pedestrian Detection Using Machine Perception</h3>
-                    <p>This project involved the detection of pedestrians using a combination of Lidar, Radar, and Image data on the TU Delft Database.</p>
+                    <h3>Multi-Sensor Perception of Intelligent Vehicles</h3>
+                    <p>
+                        This project focuses on pedestrian and obstacle detection for intelligent vehicles using a combination of LiDAR, Radar, and camera data. The project included point cloud processing and clustering for efficient region proposals. The processed point cloud data was used as a prior to enhance the performance of a pretrained convolutional neural network (CNN) for image classification. Additionally, the iterative closest point (ICP) method was employed for ego-motion compensation of the vehicle through frame transformation.
+                    </p>
                 </div>
-            </div>
+            </div>            
             <div class="project" id="project4">
                 <div class="media">
-                    <img src="media/ML.gif" alt="Project Drone Control">
+                    <img src="media/ML.gif" alt="Machine Learning for Autonomous Steering">
                 </div>
                 <div class="content">
                     <h3>Machine Learning for Autonomous Steering</h3>
-                    <p>In this project, OpenAI gym and a labelled dataset were used to train an agent to control a 2D vehicle based on pixel data from frames.</p>
+                    <p>
+                        This project involves developing an autonomous steering system using machine learning techniques. The task is framed as a classification problem within an autonomous racing game, where the agent learns driving policies from pixel observations. By leveraging imitation learning, the robot utilizes raw images as inputs. A feature extractor is designed to extract edge information from these images. The extracted features are then reduced in dimensionality through principal component analysis (PCA), resulting in a lower-dimensional feature vector that is resilient to background color variations and can generalize to new datasets.
+                    </p>
+                    <br>
+                    <p>
+                        The entire system is developed using Python, TensorFlow, and Gym for the simulation environment.
+                    </p>
                 </div>
-            </div>
+            </div>            
             <div class="project" id="project5">
                 <div class="media">
                     <img src="media/diamond.gif" alt="Project Drone Control">
                 </div>
                 <div class="content">
                     <h3>Drone Control</h3>
-                    <p>Using drone dynamics and PID control to follow a trajectory, built in Matlab.</p>
+                    <p> This project implemented quadrotor control algorithms (linear PD controller V.S. non-linear geometric controller) for trajectory tracking tasks. Multiple reference trajectories were followed such as the Circle and Diamond trajectory. The algorithms have been implemented both in Matlab as in Python.</p>
                 </div>
             </div>
         </main>

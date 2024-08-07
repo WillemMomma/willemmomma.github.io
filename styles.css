@@ -318,7 +318,7 @@ nav ul li a.active {
     display: flex;
     flex-direction: column;
     max-width: 500px;
-    margin: 20px auto;
+    margin: 5px 5px;
 }
 
 #contact form label {
@@ -327,7 +327,7 @@ nav ul li a.active {
 
 #contact form input,
 #contact form textarea {
-    width: auto;
+    width: 400px;
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #ccc;
