@@ -4,6 +4,14 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(data => {
             document.getElementById('navbar').innerHTML = data;
 
+            // Handle the menu toggle for mobile
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('show');
+            });
+
             // Highlight the active page link
             const links = document.querySelectorAll('nav ul li a');
             const currentPath = window.location.pathname.split('/').pop();
